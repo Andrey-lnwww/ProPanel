@@ -4191,20 +4191,21 @@
                 }
             });
             if (document.querySelector(".suppliers__slider")) new core(".suppliers__slider", {
-                modules: [ Autoplay ],
-                observer: true,
-                observeParents: true,
-                slidesPerView: "4",
-                spaceBetween: 0,
-                autoHeight: true,
-                speed: 1500,
+                modules: [],
+                slidesPerView: "auto",
+                spaceBetween: 20,
+                speed: 1e3,
                 grabCursor: true,
-                observeSlideChildren: true,
-                slideToClickedSlide: true,
-                watchSlidesProgress: true,
-                loop: true,
                 lazy: true,
-                watchOverflow: true,
+                freeMode: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
+                },
+                navigation: {
+                    prevEl: ".swiper-button-prev",
+                    nextEl: ".swiper-button-next"
+                },
                 on: {}
             });
         }

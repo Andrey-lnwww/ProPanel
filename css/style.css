@@ -1136,10 +1136,11 @@ input::-webkit-inner-spin-button {
 }
 
 .no-webp .preview__background{
-  background: url("../img/preview-bg.jpg"), lightgray 50%/cover no-repeat; }
+  background-image: url("../img/preview-bg.jpg"); }
 
 .preview__background {
   position: relative;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -1531,7 +1532,6 @@ input::-webkit-inner-spin-button {
   display: grid;
   -ms-grid-columns: (1fr)[12];
   grid-template-columns: repeat(12, 1fr);
-  min-width: 0;
 }
 
 @supports (padding-top: clamp( 1.875rem , 1.3169642857rem  +  2.7901785714vw , 3.4375rem )) {
@@ -1563,9 +1563,9 @@ input::-webkit-inner-spin-button {
 }
 
 .suppliers__slider {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 10;
-  grid-column: 2/12;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
   width: 100%;
 }
 
@@ -1573,22 +1573,23 @@ input::-webkit-inner-spin-button {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-column-gap: 1.25rem;
-     -moz-column-gap: 1.25rem;
-          column-gap: 1.25rem;
+}
+
+.suppliers__wrapper .suppliers__slide {
+  width: 15.625rem;
 }
 
 .suppliers__slide {
   min-height: 7.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .suppliers__title {
@@ -3417,6 +3418,12 @@ input::-webkit-inner-spin-button {
     grid-column: 8 span;
   }
 
+  .suppliers__slider {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 10;
+    grid-column: 2/12;
+  }
+
   .catalog-sizes__text {
     -ms-grid-column-span: 5;
     grid-column: 5 span;
@@ -3811,7 +3818,7 @@ input::-webkit-inner-spin-button {
 
 .webp .underline::after{ background-image: url(../img/underline.webp); }
 
-.webp .preview__background{ background: url(../img/preview-bg.webp), lightgray 50%/cover no-repeat; }
+.webp .preview__background{ background-image: url(../img/preview-bg.webp); }
 
 .webp .preview__background::after{ background: url(../img/preview-bg-overlay.webp) 0 0 no-repeat; }
 
